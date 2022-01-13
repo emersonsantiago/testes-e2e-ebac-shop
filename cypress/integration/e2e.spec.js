@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC 
@@ -9,13 +10,16 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         Preenchendo todas opções no checkout
         E validando minha compra ao final */
 
-    beforeEach(() => {
-        cy.visit('/')
-    });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        //TODO 
+        cy.comprar('0', 'Green', 'S')
+        cy.comprar('1', 'Black', 'XS')
+        cy.comprar('2', 'Blue', '36')
+        cy.comprar('3', 'Blue', 'XS')
+        cy.checkout('Emerson', 'Santiago', 'Brasil', 'Rua Engenheiro Oscar Ferreira', 'Ap 000', 'Recife', 'Pernambuco', '52061-022', '81998743079', 'emersoncostasantiago@gmail.com')
+
     });
+
 
 
 })
