@@ -54,3 +54,4 @@ Cypress.Commands.add('checkout', (nome, sobrenome, pais, endereco, complemento, 
 
 })
 
+
